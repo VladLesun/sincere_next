@@ -13,7 +13,7 @@ const Header = () => {
 		<header className='min-h-16'>
 			<div className='relative'>
 				<div
-					className={`fixed top-0 left-0 z-10 w-full px-[50px] py-5 flex justify-between items-center gap-5 ${pathname === '/schedule' ? 'bg-[#1f0808]' : 'bg-background'} max-sm:gap-0`}
+					className={`fixed top-0 left-0 z-10 w-full px-[50px] py-5 flex justify-between items-center gap-5 ${pathname === '/schedule' ? 'bg-[#1f0808]' : 'bg-background'} max-sm:gap-2`}
 				>
 					<Link
 						href='/'
@@ -31,7 +31,7 @@ const Header = () => {
 					</Link>
 
 					<nav>
-						<ul className='flex gap-[37px] text-[13px]'>
+						<ul className='flex gap-[37px] text-[13px] max-sm:flex-wrap max-sm:gap-y-2 max-sm:justify-end'>
 							{siteConfig.navLinks.map(link => (
 								<li key={link.label}>
 									<Link href={link.href}>{link.label}</Link>
