@@ -1,45 +1,35 @@
 'use client';
 
 import Links from '@/components/UI/Links';
+import { siteConfig } from '@/config/site.config';
 import Image from 'next/image';
 
 const Home = () => {
+	const homeContent = siteConfig.pagesContent.home;
+
 	return (
-		<div>
-			<section className='pt-[135px] pb-[178px] bg-[#f7f4eb] text-[#000]'>
+		<>
+			<section className='pt-[135px] pb-[178px] bg-[#f7f4eb] text-[#000] max-sm:pt-[48px] max-sm:pb-[80px]'>
 				<div className='max-w-[942px] mx-auto px-6'>
-					<h2 className='mb-[60px] text-[32px] font-medium'>
-						Welcome to Jones & Brown Legal
+					<h2 className='mb-[60px] text-[32px] font-medium max-sm:text-[22px]'>
+						{homeContent.heroSection.title}
 					</h2>
 
-					<ul className='mb-[50px] flex justify-between gap-3'>
-						<li className='max-w-[447px]'>
-							<p>
-								Jones & Brown Legal has been a pillar of the Los Angeles legal
-								community, providing expert legal counsel across a wide spectrum
-								of practice areas. We are more than just attorneys, we are
-								trusted advisors, dedicated advocates, and strategic partners
-								committed to achieving the best possible outcomes for our
-								clients.
-							</p>
-						</li>
-						<li className='max-w-[447px]'>
-							<p>
-								We combine decades of experience with a deep understanding of
-								the complexities of California law. Our team of seasoned trial
-								attorneys boasts a proven track record of success in courtrooms
-								throughout Los Angeles and beyond. We pride ourselves on our
-								comprehensive expertise, covering nearly every field of law,
-								ensuring that whatever your legal challenge, we have the
-								knowledge and experience to guide you.
-							</p>
-						</li>
+					<ul className='mb-[50px] flex justify-between gap-3 max-lg:gap-[48px] max-sm:flex-col max-sm:gap-6'>
+						{homeContent.heroSection.description.map(item => (
+							<li
+								key={item.text}
+								className='w-[49%] max-sm:w-full'
+							>
+								<p>{item.text}</p>
+							</li>
+						))}
 					</ul>
 
 					<Links
 						variant='secondary'
 						href='/schedule'
-						className='w-[202px]'
+						className='w-[202px] max-sm:mx-auto'
 					>
 						Schedule a Consult
 					</Links>
@@ -48,26 +38,28 @@ const Home = () => {
 
 			<section>
 				<Image
-					src='/breaker-img.png'
-					alt='books'
+					src={homeContent.offerSection.image.src}
+					alt={homeContent.offerSection.image.alt}
 					width={1280}
 					height={625}
-					className='w-full h-auto object-cover'
+					className='w-full min-h-[625px] object-cover max-lg:min-h-[480px] max-sm:min-h-[280px]'
 				/>
 
-				<div className='max-w-[1128px] flex gap-[74px] ml-auto pt-[93px] pb-[126px] px-7'>
-					<h2 className='text-[32px] font-medium'>What We Offer</h2>
+				<div className='max-w-[1128px] flex gap-[74px] ml-auto pt-[93px] pb-[126px] px-7 max-lg:flex-col max-lg:gap-[48px] max-sm:py-[64px] max-sm:gap-6'>
+					<h2 className='text-[32px] font-medium'>
+						{homeContent.offerSection.title}
+					</h2>
 
 					<nav>
-						<ul className='flex flex-col mb-[64px] text-[76px] leading-[95%] tracking-[-0.06em]'>
-							<li>Business formation</li>
-							<li>Contract drafting</li>
-							<li>Mergers and Acquisitions</li>
-							<li>Property Protection</li>
-							<li>Employment Law</li>
-							<li>Corporate Governance</li>
-							<li>Shareholder Disputes</li>
-							<li className='text-[#fff0c480]'>+More</li>
+						<ul className='flex flex-col mb-[64px] text-[76px] leading-[95%] tracking-[-0.06em] max-lg:text-[64px] max-sm:text-[36px]'>
+							{homeContent.offerSection.list.map(item => (
+								<li
+									key={item.text}
+									className='last:text-[#fff0c480]'
+								>
+									{item.text}{' '}
+								</li>
+							))}
 						</ul>
 
 						<Links
@@ -82,41 +74,40 @@ const Home = () => {
 			</section>
 
 			<section className='bg-[#fff]'>
-				<div className='flex flex-col gap-14 max-w-[738px] mx-auto px-7 py-29 text-[#000]'>
-					<div>
-						<h2>Hear From Our Clients</h2>
-						<p>
-							We believe that our clients&apos; experiences speak volumes about
-							the quality of our legal services. Here&apos;s what some of them
-							have to say:
+				<div className='flex flex-col gap-14 max-w-[738px] mx-auto px-7 py-29 text-[#000] max-sm:pt-[64px] max-sm:pb-[80px]'>
+					<div className='text-center'>
+						<h2 className='mb-8 text-[32px] max-sm:text-[22px]'>
+							{homeContent.reviewsSection.title}
+						</h2>
+						<p className='max-w-[480px] mx-auto'>
+							{homeContent.reviewsSection.description}
 						</p>
 					</div>
 
 					<div className='w-full min-h-[445px] bg-[#f6f6f6]'>Carousel</div>
 
-					<p>
-						Let us help you navigate your legal journey with confidence and
-						peace of mind. Contact Jones & Brown Legal today.
+					<p className='max-w-[480px] mx-auto text-center'>
+						{homeContent.reviewsSection.connection}
 					</p>
 
 					<Links
 						variant='secondary'
 						href='/schedule'
-						className='w-[202px]'
+						className='w-[202px] mx-auto'
 					>
 						Schedule a Consult
 					</Links>
 				</div>
 
 				<Image
-					src='/divider-img1.png'
-					alt='hall'
+					src={homeContent.bottomImgSection.src}
+					alt={homeContent.bottomImgSection.alt}
 					width={1280}
 					height={625}
-					className='w-full h-auto object-cover'
+					className='w-full min-h-[625px] object-cover max-lg:min-h-[480px] max-sm:min-h-[280px]'
 				/>
 			</section>
-		</div>
+		</>
 	);
 };
 

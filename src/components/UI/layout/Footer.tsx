@@ -4,9 +4,9 @@ import Link from 'next/link';
 const Footer = () => {
 	return (
 		<footer className='py-17 bg-[#f7f4eb] text-[#000]'>
-			<div className='px-38'>
-				<div className='flex flex-col gap-21'>
-					<div className='flex justify-between items-center'>
+			<div className='max-w-[976px] px-7'>
+				<div className='flex flex-col gap-21 max-lg:gap-12'>
+					<div className='flex justify-between items-center gap-6 max-sm:flex-col max-sm:items-start'>
 						<Link href='/'>
 							<svg
 								width='50'
@@ -19,12 +19,14 @@ const Footer = () => {
 							</svg>
 						</Link>
 
-						<p className='text-6xl'>Jones & Brown Legal</p>
+						<p className='text-6xl max-lg:text-4xl max-sm:text-2xl'>
+							Jones & Brown Legal
+						</p>
 					</div>
 
 					<p className='text-lg'>Deep expertise, decisive courtroom presence</p>
 
-					<div className='max-w-[855px] flex justify-between gap-[45px] text-sm'>
+					<div className='max-w-[855px] flex justify-between gap-[45px] text-sm max-sm:flex-col max-sm:gap-6'>
 						<ul>
 							{siteConfig.contacts.map(contact => (
 								<li key={contact.href}>
