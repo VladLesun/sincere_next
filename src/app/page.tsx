@@ -1,5 +1,6 @@
 'use client';
 
+import Carousel from '@/components/common/carousel/carousel';
 import Links from '@/components/UI/Links';
 import { siteConfig } from '@/config/site.config';
 import Image from 'next/image';
@@ -84,7 +85,7 @@ const Home = () => {
 						</p>
 					</div>
 
-					<div className='w-full min-h-[445px] bg-[#f6f6f6]'>Carousel</div>
+					<Carousel />
 
 					<p className='max-w-[480px] mx-auto text-center'>
 						{homeContent.reviewsSection.connection}

@@ -38,7 +38,7 @@ const Services = () => {
 								return (
 									<li
 										key={item.title}
-										className='flex justify-between gap-6 py-5 border-t border-[#fff] max-lg:w-full max-lg:max-w-[326px] max-lg:flex-col'
+										className='flex justify-between gap-6 py-5 border-t border-[#fff] max-lg:w-full max-lg:max-w-[326px] max-lg:flex-col max-md:max-w-none'
 									>
 										<h3 className='w-[40%] max-lg:w-full'>{item.title}</h3>
 										<p className='w-[40%] max-lg:w-full'>{parse(cleanHtml)}</p>
