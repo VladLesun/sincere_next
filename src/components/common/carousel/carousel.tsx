@@ -10,9 +10,9 @@ const Carousel = () => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-	const nextSlide = () =>
-		setActiveId(prev => (prev === slides.length - 1 ? 0 : prev + 1));
 	const prevSlide = () =>
+		setActiveId(prev => (prev === slides.length - 1 ? 0 : prev + 1));
+	const nextSlide = () =>
 		setActiveId(prev => (prev === 0 ? slides.length - 1 : prev - 1));
 
 	useEffect(() => {
@@ -57,6 +57,8 @@ const Carousel = () => {
 					slides={slides}
 					nextSlide={nextSlide}
 					prevSlide={prevSlide}
+					activeId={activeId}
+					onSelect={setActiveId}
 				/>
 			</div>
 		</div>
