@@ -15,17 +15,11 @@ const CarouselActions = ({
 				onClick={nextSlide}
 			>
 				<svg
+					viewBox='0 0 24 24'
 					width='24'
 					height='24'
-					viewBox='0 0 24 24'
-					fill='none'
-					stroke='currentColor'
-					xmlns='http://www.w3.org/2000/svg'
 				>
-					<path
-						d='M11.834 2.5L2.33398 12M2.33398 12L11.834 21.5M2.33398 12H21.0546'
-						strokeWidth='2'
-					/>
+					<use href='/sprite.svg#slide-arrow' />
 				</svg>
 			</button>
 
@@ -40,17 +34,11 @@ const CarouselActions = ({
 				onClick={prevSlide}
 			>
 				<svg
+					viewBox='0 0 24 24'
 					width='24'
 					height='24'
-					viewBox='0 0 24 24'
-					fill='none'
-					stroke='currentColor'
-					xmlns='http://www.w3.org/2000/svg'
 				>
-					<path
-						d='M11.834 2.5L2.33398 12M2.33398 12L11.834 21.5M2.33398 12H21.0546'
-						strokeWidth='2'
-					/>
+					<use href='/sprite.svg#slide-arrow' />
 				</svg>
 			</button>
 		</div>

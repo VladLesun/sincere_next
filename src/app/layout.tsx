@@ -18,6 +18,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: siteConfig.title,
 	description: siteConfig.description,
+	icons: {
+		icon: '/favicon/favicon.png',
+		apple: '/favicon/apple-touch-icon.png',
+	},
 };
 
 export default function RootLayout({
@@ -32,7 +36,7 @@ export default function RootLayout({
 			>
 				<div className='flex min-h-screen flex-col justify-between'>
 					<Header />
-					<main className=''>{children}</main>
+					<main>{children}</main>
 					<Footer />
 				</div>
 			</body>
