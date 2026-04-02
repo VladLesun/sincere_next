@@ -1,4 +1,5 @@
 import { ICarouselActions } from '@/types/carousel.types';
+import CarouselButtons from './carouselButtons';
 import CarouselSideBar from './carouselSideBar';
 
 const CarouselActions = ({
@@ -10,18 +11,7 @@ const CarouselActions = ({
 }: ICarouselActions) => {
 	return (
 		<div className='absolute bottom-[32px] left-[50%] w-full translate-x-[-50%] flex items-center justify-center gap-5 max-sm:bottom-[30px]'>
-			<button
-				className='shrink-0 active:scale-90 cursor-pointer'
-				onClick={nextSlide}
-			>
-				<svg
-					viewBox='0 0 24 24'
-					width='24'
-					height='24'
-				>
-					<use href='/sprite.svg#slide-arrow' />
-				</svg>
-			</button>
+			<CarouselButtons onClick={nextSlide} />
 
 			<CarouselSideBar
 				slides={slides}
@@ -29,18 +19,10 @@ const CarouselActions = ({
 				activeId={activeId}
 			/>
 
-			<button
-				className='rotate-180 shrink-0 active:scale-90 cursor-pointer'
+			<CarouselButtons
 				onClick={prevSlide}
-			>
-				<svg
-					viewBox='0 0 24 24'
-					width='24'
-					height='24'
-				>
-					<use href='/sprite.svg#slide-arrow' />
-				</svg>
-			</button>
+				className='rotate-180'
+			/>
 		</div>
 	);
 };
