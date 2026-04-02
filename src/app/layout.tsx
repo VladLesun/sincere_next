@@ -1,5 +1,5 @@
-import Footer from '@/components/UI/layout/Footer';
-import Header from '@/components/UI/layout/Header';
+import Footer from '@/components/uiComponents/layout/Footer';
+import Header from '@/components/uiComponents/layout/Header';
 import { siteConfig } from '@/config/site.config';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
@@ -18,10 +18,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: siteConfig.title,
 	description: siteConfig.description,
-	icons: {
-		icon: '/favicon/favicon.png',
-		apple: '/favicon/apple-touch-icon.png',
-	},
 };
 
 export default function RootLayout({
