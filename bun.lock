@@ -4,8 +4,8 @@
     "": {
       "name": "sincere_next",
       "dependencies": {
-        "html-react-parser": "^5.2.17",
-        "isomorphic-dompurify": "^3.5.1",
+        "html-react-parser": "5.2.17",
+        "isomorphic-dompurify": "3.5.1",
         "next": "16.1.6",
         "react": "19.2.3",
         "react-dom": "19.2.3",

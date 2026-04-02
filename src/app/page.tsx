@@ -1,7 +1,7 @@
 'use client';
 
 import Carousel from '@/components/common/carousel/carousel';
-import Links from '@/components/uiComponents/Links';
+import Links from '@/components/ui/Links';
 import { siteConfig } from '@/config/site.config';
 import Image from 'next/image';
 

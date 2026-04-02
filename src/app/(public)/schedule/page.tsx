@@ -1,6 +1,6 @@
 'use client';
 
-import Links from '@/components/uiComponents/Links';
+import Links from '@/components/ui/Links';
 import { siteConfig } from '@/config/site.config';
 
 const Schedule = () => {
