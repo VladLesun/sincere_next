@@ -11,6 +11,7 @@ const CarouselActions = ({
 }: ICarouselActions) => {
 	return (
 		<div className='absolute bottom-[32px] left-[50%] w-full translate-x-[-50%] flex items-center justify-center gap-5 max-sm:bottom-[30px]'>
+			{/* пупу пум, сделал все в дев ветке, а потом понял, что не там сделал  */}
 			<CarouselButtons onClick={nextSlide} />
 
 			<CarouselSideBar
