@@ -37,7 +37,6 @@ const Schedule = () => {
 					</p>
 
 					<Links
-						href='/schedule'
 						variant='primary'
 						className='w-[202px]'
 					>
