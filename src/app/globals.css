@@ -41,3 +41,7 @@ svg {
 svg {
 	max-height: 100%;
 }
+
+.ReactModal__Body--open {
+	overflow: hidden;
+}

@@ -93,7 +93,6 @@ const Home = () => {
 
 					<Links
 						variant='secondary'
-						href='/schedule'
 						className='w-[202px] mx-auto'
 					>
 						Schedule a Consult
